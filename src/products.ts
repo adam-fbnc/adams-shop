@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
     name: 'USB-C Hub 7-in-1',
     price: 54.99,
     category: 'electronics',
-    image: 'https://images.unsplash.com/photo-1625595339411-fab99f8afff4?w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
     description: 'Expand your laptop with HDMI 4K, 3× USB-A, SD card, and 100W pass-through charging.',
   },
 ];
