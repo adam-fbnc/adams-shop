@@ -652,11 +652,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-bottom-color: var(--black);
 }
 
+/* Both forms share the same grid cell — card height = taller form, no jump on toggle */
+.auth-forms-wrap {
+  display: grid;
+}
 .auth-form {
+  grid-area: 1 / 1;          /* stack both forms in the same cell */
   padding: 28px 32px 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: opacity 0.15s ease;
+}
+/* Override the global .hidden rule: keep in layout, just make invisible */
+.auth-form.hidden {
+  display: flex !important;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
 .auth-title {
   font-size: 1.4rem;
