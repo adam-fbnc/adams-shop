@@ -1,5 +1,6 @@
 import { PRODUCTS } from './products';
 import { Cart } from './cart';
+import { initCheckout, openCheckout } from './checkout';
 import type { Product } from './types';
 
 const cart = new Cart();
@@ -109,9 +110,8 @@ cartOverlay.addEventListener('click', closeCart);
 continueBtn.addEventListener('click', closeCart);
 
 checkoutBtn.addEventListener('click', () => {
-  cart.clear();
   closeCart();
-  showToast('Order placed! Thanks for shopping. 🎉');
+  openCheckout();
 });
 
 // ── Product grid ──────────────────────────────────────────────────────────────
@@ -278,3 +278,4 @@ logoLink.addEventListener('click', (e) => {
 // ── Init ──────────────────────────────────────────────────────────────────────
 renderProducts();
 renderCart();
+initCheckout(cart);
