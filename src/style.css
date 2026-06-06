@@ -655,9 +655,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* Both forms share the same grid cell — card height = taller form, no jump on toggle */
 .auth-forms-wrap {
   display: grid;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 .auth-form {
   grid-area: 1 / 1;          /* stack both forms in the same cell */
+  width: 100%;
+  min-width: 0;
   padding: 28px 32px 32px;
   display: flex;
   flex-direction: column;
@@ -690,6 +695,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gray-600);
 }
 .field-group input {
+  width: 100%;
+  min-width: 0;
   padding: 10px 13px;
   border: 1.5px solid var(--gray-200);
   border-radius: var(--radius-sm);
