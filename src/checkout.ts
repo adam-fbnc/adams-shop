@@ -273,7 +273,7 @@ export function initCheckout(cart: Cart): void {
   // Sign Up submit
   $('form-signup').addEventListener('submit', (e) => {
     e.preventDefault();
-    const fields = ['su-name', 'su-phone', 'su-email', 'su-password', 'su-street', 'su-city', 'su-state', 'su-zip'];
+    const fields = ['su-name', 'su-email', 'su-password', 'su-street', 'su-city', 'su-state', 'su-zip'];
     if (!validateIds(fields)) return;
     const street = ($('su-street') as HTMLInputElement).value.trim();
     const city   = ($('su-city')   as HTMLInputElement).value.trim();
