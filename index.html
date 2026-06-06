@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="#" class="header__logo" id="logo-link">Adam Shop</a>
+        <nav class="header__nav">
+          <a href="#" class="nav-link active" data-filter="all">All</a>
+          <a href="#" class="nav-link" data-filter="clothing">Clothing</a>
+          <a href="#" class="nav-link" data-filter="electronics">Electronics</a>
+          <a href="#" class="nav-link" data-filter="accessories">Accessories</a>
+        </nav>
+        <div class="header__actions">
+          <div class="search-wrap">
+            <input type="text" id="search-input" class="search-input" placeholder="Search…" />
+          </div>
+          <button class="cart-btn" id="cart-toggle" aria-label="Open cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero-section">
+      <div class="hero__inner">
+        <p class="hero__tag">New arrivals</p>
+        <h1 class="hero__title">Shop the latest drops</h1>
+        <p class="hero__sub">Free shipping on orders over $50</p>
+        <button class="btn btn--primary" id="hero-cta">Browse products</button>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <main class="main" id="main-section">
+      <div class="products-header">
+        <h2 class="products-title" id="products-heading">All Products</h2>
+        <div class="sort-wrap">
+          <select id="sort-select" class="sort-select">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+      <div class="cart-sidebar__header">
+        <h2>Your Cart</h2>
+        <button class="cart-close" id="cart-close" aria-label="Close cart">✕</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-sidebar__footer" id="cart-footer">
+        <div class="cart-subtotal">
+          <span>Subtotal</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button class="btn btn--primary btn--full" id="checkout-btn">Checkout</button>
+        <button class="btn btn--ghost btn--full" id="continue-btn">Continue Shopping</button>
+      </div>
+    </aside>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal" id="product-modal">
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+        <div class="modal__body" id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <footer class="footer">
+      <p>© 2026 Adam Shop · Built with TypeScript & Vite</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
