@@ -1,3 +1,6 @@
+/* ── Utility ───────────────────────────────────────────────────────────────── */
+.hidden { display: none !important; }
+
 /* ── Reset & base ──────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -701,6 +704,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-top: -4px;
 }
 .co-submit { padding: 13px; font-size: 0.95rem; }
+.auth-switch {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+.auth-switch a {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .req { color: var(--danger); margin-left: 1px; }
 
 /* ── Order Review ───────────────────────────────────────────────────────────── */

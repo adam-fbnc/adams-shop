@@ -249,6 +249,10 @@ export function initCheckout(cart: Cart): void {
   $('tab-signin').addEventListener('click', () => switchTab('signin'));
   $('tab-signup').addEventListener('click', () => switchTab('signup'));
 
+  // Switcher links inside forms
+  $('switch-to-signup').addEventListener('click', (e) => { e.preventDefault(); switchTab('signup'); });
+  $('switch-to-signin').addEventListener('click', (e) => { e.preventDefault(); switchTab('signin'); });
+
   // Clear error styling as user types
   document.querySelectorAll<HTMLInputElement>('#checkout-view input').forEach((input) => {
     input.addEventListener('input', () => input.classList.remove('input--error'));
