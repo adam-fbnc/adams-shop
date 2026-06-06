@@ -612,6 +612,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 48px 24px 80px;
 }
 
+/* Auth step: vertically center the card in the available viewport */
+#co-step-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px); /* 60px = co-nav height */
+  padding: 32px 24px;
+}
+
 /* ── Auth card ──────────────────────────────────────────────────────────────── */
 .auth-card {
   background: var(--white);
@@ -692,17 +701,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-top: -4px;
 }
 .co-submit { padding: 13px; font-size: 0.95rem; }
-.auth-switch {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--gray-600);
-}
-.auth-switch a {
-  color: var(--black);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
+.req { color: var(--danger); margin-left: 1px; }
 
 /* ── Order Review ───────────────────────────────────────────────────────────── */
 .review-layout {

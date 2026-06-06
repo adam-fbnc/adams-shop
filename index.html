@@ -116,30 +116,23 @@
 
           <!-- Sign In form -->
           <form id="form-signin" class="auth-form" novalidate>
-            <h2 class="auth-title">Welcome back</h2>
             <div class="field-group">
-              <label for="si-name">Full Name</label>
-              <input id="si-name" type="text" placeholder="Jane Doe" autocomplete="name" />
+              <label for="si-username">Username <span class="req">*</span></label>
+              <input id="si-username" type="text" placeholder="Enter your username" autocomplete="username" />
             </div>
             <div class="field-group">
-              <label for="si-email">Email</label>
-              <input id="si-email" type="email" placeholder="jane@example.com" autocomplete="email" />
-            </div>
-            <div class="field-group">
-              <label for="si-password">Password</label>
+              <label for="si-password">Password <span class="req">*</span></label>
               <input id="si-password" type="password" placeholder="••••••••" autocomplete="current-password" />
             </div>
             <p class="field-note">Demo only — no real authentication or data storage.</p>
             <button type="submit" class="btn btn--primary btn--full co-submit">Sign In &amp; Continue</button>
-            <p class="auth-switch">No account? <a href="#" id="switch-to-signup">Sign up</a></p>
           </form>
 
           <!-- Sign Up form -->
           <form id="form-signup" class="auth-form hidden" novalidate>
-            <h2 class="auth-title">Create account</h2>
             <div class="field-row">
               <div class="field-group">
-                <label for="su-name">Full Name</label>
+                <label for="su-name">Full Name <span class="req">*</span></label>
                 <input id="su-name" type="text" placeholder="Jane Doe" autocomplete="name" />
               </div>
               <div class="field-group">
@@ -148,34 +141,33 @@
               </div>
             </div>
             <div class="field-group">
-              <label for="su-email">Email</label>
+              <label for="su-email">Email <span class="req">*</span></label>
               <input id="su-email" type="email" placeholder="jane@example.com" autocomplete="email" />
             </div>
             <div class="field-group">
-              <label for="su-password">Password</label>
+              <label for="su-password">Password <span class="req">*</span></label>
               <input id="su-password" type="password" placeholder="••••••••" autocomplete="new-password" />
             </div>
             <div class="field-group">
-              <label for="su-street">Street Address</label>
+              <label for="su-street">Street Address <span class="req">*</span></label>
               <input id="su-street" type="text" placeholder="123 Main St" autocomplete="street-address" />
             </div>
             <div class="field-row field-row--3">
               <div class="field-group">
-                <label for="su-city">City</label>
+                <label for="su-city">City <span class="req">*</span></label>
                 <input id="su-city" type="text" placeholder="New York" autocomplete="address-level2" />
               </div>
               <div class="field-group">
-                <label for="su-state">State</label>
+                <label for="su-state">State <span class="req">*</span></label>
                 <input id="su-state" type="text" placeholder="NY" autocomplete="address-level1" />
               </div>
               <div class="field-group">
-                <label for="su-zip">ZIP</label>
+                <label for="su-zip">ZIP <span class="req">*</span></label>
                 <input id="su-zip" type="text" placeholder="10001" autocomplete="postal-code" />
               </div>
             </div>
             <p class="field-note">Demo only — no real authentication or data storage.</p>
             <button type="submit" class="btn btn--primary btn--full co-submit">Create Account &amp; Continue</button>
-            <p class="auth-switch">Have an account? <a href="#" id="switch-to-signin">Sign in</a></p>
           </form>
 
         </div>

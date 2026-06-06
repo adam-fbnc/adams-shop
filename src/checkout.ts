@@ -248,8 +248,6 @@ export function initCheckout(cart: Cart): void {
   // Tab buttons
   $('tab-signin').addEventListener('click', () => switchTab('signin'));
   $('tab-signup').addEventListener('click', () => switchTab('signup'));
-  $('switch-to-signup').addEventListener('click', (e) => { e.preventDefault(); switchTab('signup'); });
-  $('switch-to-signin').addEventListener('click', (e) => { e.preventDefault(); switchTab('signin'); });
 
   // Clear error styling as user types
   document.querySelectorAll<HTMLInputElement>('#checkout-view input').forEach((input) => {
@@ -259,10 +257,10 @@ export function initCheckout(cart: Cart): void {
   // Sign In submit
   $('form-signin').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!validateIds(['si-name', 'si-email', 'si-password'])) return;
+    if (!validateIds(['si-username', 'si-password'])) return;
     _session = {
-      name: firstNameOf(($('si-name') as HTMLInputElement).value),
-      email: ($('si-email') as HTMLInputElement).value.trim(),
+      name: 'Current user',
+      email: ($('si-username') as HTMLInputElement).value.trim(),
       address: '',
     };
     gotoStep('review');
